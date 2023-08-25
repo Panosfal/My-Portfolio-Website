@@ -68,6 +68,10 @@ nav {
 .logo {
     margin: 1rem;
 }
+#navbar {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 nav ul{
     margin: 0;
     padding: 0;
@@ -80,9 +84,13 @@ nav ul li {
 }
 nav ul li a{
     text-decoration: none;
-    color: #000;
+    color: #0000009d;
     font-size: 1.5rem;
+    font-weight:500;
     
+}
+nav ul li a:hover{
+    color: #000;
 }
 .mobile-nav-toggle {
     z-index: 9999;
@@ -120,15 +128,15 @@ gap: var(--gap, 2rem);
         background: url(assets/hamburger.svg);
         background-repeat: no-repeat;
         border: 0;
+        
         width: 3rem;
         aspect-ratio: 1;
-        top: 2rem;
+        top: 1rem;
         right: 2rem;
         z-index: 9999;
     }
     .mobile-nav-toggle[aria-expanded = "true"]{
         background: url(assets/close.png);
-        
     }
     
     .stop-scrolling{
@@ -412,7 +420,10 @@ footer li {
     padding: 5px;
 }
 .contact-footer {
-    padding-left: 120px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
 }
 .container-box {
     display: flex;
