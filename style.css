@@ -67,6 +67,7 @@ h1 .ff-mono {
 }
 html {
     scroll-behavior: smooth !important;
+    overflow-x: hidden;
 }
 body {
     overflow-x: hidden;
@@ -241,7 +242,7 @@ body {
     }
 }
 
-/* NAVBAR */
+/* ////////////////////////    NAVBAR   //////////////////////// */
 nav {
     display: flex;
     justify-content: space-between;
@@ -731,10 +732,10 @@ footer li {
 }
 .skills ul li p{
     font-weight: normal;
-    color: #6c757d; /* text-muted (Bootstrap)*/
+    color: var(--clr-primary-dark);
 }
 .green-muted ul li p {
-    color: #5fa052;
+    color: var(--clr-primary-dark);
 }
 
 .akmi-box {
