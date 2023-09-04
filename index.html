@@ -252,7 +252,7 @@
                     <h1 class="title fc-light">Please feel free to reach out, say hi, provide me with feedback or ask me anything you wish! It's been a pleasure to showcase my work and share my projects.</h1>
                 </div>
                 <div class="col-sm-2"></div>    
-                <form class="contact-form row p-5 mx-3" action="https://formsubmit.co/pfaltsioni@gmail.com" method="POST">
+                <form class="contact-form row p-5 mx-3 " onsubmit="reset();">
                    <div class="form-field col-lg-6">
                       <input id="name" class="input-text js-input" type="text" required>
                       <label class="label" for="name">Name</label>
@@ -266,11 +266,11 @@
                       <label class="label" for="message">Message</label>
                    </div>
                    <div class="form-field col-lg-12">
-                      <input class="submit-btn" type="submit" value="Submit">
+                      <input id="submit" class="submit-btn" type="submit" value="Submit">
                    </div>
                 </form>
              </section>
-             
+
             </section>
     </main>
     <footer class="row text-dark primary-light p-5">
@@ -313,5 +313,9 @@
         <p class="text-center text-muted">© 2023 Panagiotis Faltsioni - All rights reserved</p>
 
     </footer>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="contact.js"></script>
 </body>
 </html>
+
+
