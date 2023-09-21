@@ -1,4 +1,4 @@
-const name = document.getElementById('name');
+const theirName = document.getElementById('name');
 const email = document.getElementById('email');
 const message = document.getElementById('message');
 const submit = document.getElementsByClassName('contact-form')[0];
@@ -7,7 +7,7 @@ submit.addEventListener('submit', (e)=>{
     e.preventDefault();
     console.log("Clicked");
     let ebody = `
-    <b>Name: </b> ${name.value}
+    <b>Name: </b> ${theirName.value}
     <br/>
     <b>Email: </b> ${email.value}
     <br/>

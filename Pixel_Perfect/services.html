@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -14,138 +14,113 @@
 </head>
 <body class="">
     <header>
-<!--NAVIGATION BAR SECTION-->
-        <nav class="navbar navbar-expand-sm navbar-light fixed-top text-light" style="background-color: rgba(28, 27, 27, 0.5); backdrop-filter: blur(5px);">
-            <div class="container-fluid">
-                <a href="home.html" class="navbar-brand text-light "><span style="color:#FCF55F">Pixel Perfect</span></a>
-                <div class="nav-item w-80 ">
-                    <a href="services.html" target="_blank" class=" nav_hover nav-item px-2 text-decoration-none">Services</a>
-                    <a href="aboutus.html" target="_blank" class=" nav_hover nav-item px-2 text-decoration-none">About Us</a>
-                    <a href="clients.html" target="_blank" class=" nav_hover nav-item px-2 text-decoration-none">Clients</a>
-                    <a href="contact.html" target="_blank" class=" nav_hover nav-item px-2 text-decoration-none ">Contact</a>
-                </div>
-            </div>
+        <!--NAVIGATION BAR SECTION-->
+        <nav class="nav-body">
+            <a href="index.html" class="nav-brand"><span style="color:#FCF55F">Pixel Perfect</span></a>
+            <button class="mobile-nav-toggle" onclick="disableScroll();" aria-expanded="false"></button>
+            <ul id="primary-navigation" class="primary-navigation nav-contents" data-visible="false">
+                <li>
+                    <a href="services.html" onclick="closeNavigation(); enableScroll();" class="nav-items">Services</a>
+                </li>
+                <li>
+                    <a href="aboutus.html" onclick="closeNavigation(); enableScroll();" class="nav-items">About Us</a>
+                </li>
+                <li>
+                    <a href="clients.html" onclick="closeNavigation(); enableScroll();" class="nav-items">Clients</a>
+                </li>
+                <li>
+                    <a href="contact.html" onclick="closeNavigation(); enableScroll();" class="nav-items">Contact</a>
+                </li>
+            </ul>
         </nav>
     </header>
-<!--SERVICES SECTION-->
-    <div class="wrapper container-fluid m-auto">
-        <div class="mt-5 text-center row">
-            <div class="col-sm-12 display-1 yellow-underline">
-                Services
-            </div>
+    <!--SERVICES SECTION-->
+    <main class="">
+        <div class="diagonal">
+            <h1 class="section-header">Services</h1>
+            <section class="page-intro">
+                <p> We offer a wide range of web development services that are tailored to meet the unique needs of each client.</p>
+                <p>Our team of experienced web developers and designers work closely with our clients to understand their business goals, target audience, and brand identity, in order to deliver customized solutions that exceed their expectations.</p>
+                <p>Whether you need a new website, an e-commerce platform, or ongoing website maintenance and support, we have the expertise to deliver high-quality work that meets your business needs.</p>
+            </section>
         </div>
-        <div class="row container-fluid diagonal p-5">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10">
-                <p class="fs-3 mt-3"> We offer a wide range of web development services that are tailored to meet the unique needs of each client.</p>
-                <p class="fs-3 mt-3" >Our team of experienced web developers and designers work closely with our clients to understand their business goals, target audience, and brand identity, in order to deliver customized solutions that exceed their expectations.</p>
-                <p class="fs-3 mt-3">Whether you need a new website, an e-commerce platform, or ongoing website maintenance and support, we have the expertise to deliver high-quality work that meets your business needs.</p>
-            </div>
-            <div class="col-sm-1"></div>
+        <div class="">
+            <p class="call-to-action-p">
+                Learn about our web development services and how we can help you achieve your online goals on this page.
+            </p>
         </div>
-        <div class="mt-5 text-center row">
-            <div class="col-sm-12 mt-5 display-5">
-                Learn about our web development services<br> and how we can help you achieve your online goals<br> on this page.
+        <section class="services-bg">
+            <div class="services-card">
+                <h4 class="services-title">Web Design_</h4>
+                <p class="services-info">Creating visually appealing and user-friendly websites that reflect the client's brand and meet their business goals.</p>
             </div>
-        </div>
-        <div class="row container-fluid">
+            <div class=" services-card">
+                <h4 class="services-title">Web Development_</h4>
+                <p class="services-info">Developing custom websites and web applications using programming languages such as HTML, CSS, JavaScript, PHP, and Python.</p>
+            </div>
+            <div class=" services-card">
+                <h4 class="services-title">E-commerce development_</h4>
+                <p class="services-info">Creating online stores and shopping carts that allow businesses to sell their products or services online.</p>
+            </div>
 
-            <div class="col-sm-4">
-                <div class="card p-3 h-100 rounded-5 shadow-lg ">
-                    <div class="card-title display-5 fw-bold">Web Design</div>
-                    <div class="card-text fs-3">Creating visually appealing and user-friendly websites that reflect the client's brand and meet their business goals.</div>
-                </div>
+            <div class=" services-card">
+                <h4 class="services-title">Content management systems (CMS)_</h4>
+                <p class="services-info">Developing and customizing CMS platforms such as WordPress, Drupal, and Joomla to help clients manage their website content.</p>
             </div>
-            <div class="col-sm-4">
-                <div class="card p-3 h-100 rounded-5 shadow-lg ">
-                    <div class="card-title display-5 fw-bold">Web Development</div>
-                    <div class="card-text fs-3">Developing custom websites and web applications using programming languages such as HTML, CSS, JavaScript, PHP, and Python.</div>
-                </div>
+            <div class=" services-card">
+                <h4 class="services-title">Search engine optimization (SEO)_</h4>
+                <p class="services-info">Improving website ranking and visibility on search engines such as Google, Bing, and Yahoo to attract more organic traffic.
+                </p>
             </div>
-            <div class="col-sm-4">
-                <div class="card p-3 h-100 rounded-5 shadow-lg ">
-                    <div class="card-title display-5 fw-bold">E-commerce development</div>
-                    <div class="card-text fs-3">Creating online stores and shopping carts that allow businesses to sell their products or services online.</div>
-                </div>
+            <div class=" services-card">
+                <h4 class="services-title">Responsive web design_</h4>
+                <p class="services-info">Designing websites that are optimized for mobile devices and tablets, ensuring a consistent user experience across all devices.</p>
             </div>
-        </div>
 
-        <div class="row container-fluid">    
-            <div class="col-sm-4">
-                <div class="card p-3 h-100 rounded-5 shadow-lg ">
-                    <div class="card-title display-5 fw-bold">Content management systems (CMS)</div>
-                    <div class="card-text fs-3">Developing and customizing CMS platforms such as WordPress, Drupal, and Joomla to help clients manage their website content.</div>
-                </div>
+            <div class=" services-card">
+                <h4 class="services-title">Website maintenance and support_</h4>
+                <p class="services-info">Providing ongoing support and maintenance services to ensure that websites remain up-to-date, secure, and bug-free.</p>
             </div>
-            <div class="col-sm-4">
-                <div class="card p-3 h-100 rounded-5 shadow-lg ">
-                    <div class="card-title display-5 fw-bold">Search engine optimization (SEO)</div>
-                    <div class="card-text fs-3">Improving website ranking and visibility on search engines such as Google, Bing, and Yahoo to attract more organic traffic.
-                    </div>
-                </div>
+            <div class=" services-card">
+                <h4 class="services-title">Website hosting_</h4>
+                <p class="services-info">Providing website hosting services to ensure that clients' websites are accessible and available online.</p>
             </div>
-            <div class="col-sm-4">
-                <div class="card p-3 h-100 rounded-5 shadow-lg ">
-                    <div class="card-title display-5 fw-bold">Responsive web design</div>
-                    <div class="card-text fs-3">Designing websites that are optimized for mobile devices and tablets, ensuring a consistent user experience across all devices.</div>
-                </div>
+            <div class=" services-card">
+                <h4 class="services-title">Website analytics_</h4>
+                <p class="services-info">Setting up website analytics tools such as Google Analytics to track website traffic, user behavior, and other important metrics.</p>
             </div>
-        </div>
-
-        <div class="row container-fluid">
-            <div class="col-sm-4">
-                <div class="card p-3 h-100 rounded-5 shadow-lg ">
-                    <div class="card-title display-5 fw-bold">Website maintenance and support</div>
-                    <div class="card-text fs-3">Providing ongoing support and maintenance services to ensure that websites remain up-to-date, secure, and bug-free.</div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card p-3 h-100 rounded-5 shadow-lg ">
-                    <div class="card-title display-5 fw-bold">Website hosting</div>
-                    <div class="card-text fs-3">Providing website hosting services to ensure that clients' websites are accessible and available online.</div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="card p-3 h-100 rounded-5 shadow-lg ">
-                    <div class="card-title display-5 fw-bold">Website analytics</div>
-                    <div class="card-text fs-3">Setting up website analytics tools such as Google Analytics to track website traffic, user behavior, and other important metrics.</div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <footer>
-        <div class="container-fluid row yellow position-static z-0 pt-5 pb-5">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-4">
-                <div>
-                    <h3>Get in touch</h3>
-                    <ul class="fw-bolder">
-                        <li class="list-unstyled"><a href="https://www.facebook.com/" target="_blank" id="Facebook" class="list-unstyled list-group-item">Facebook</a></li>
-                        <li class="list-unstyled"><a href="https://www.youtube.com/" target="_blank" id="Youtube" class="list-unstyled list-group-item">Youtube</a></li>
-                        <li class="list-unstyled"><a href="https://twitter.com/" target="_blank" id="Twitter" class="list-unstyled list-group-item">Twitter</a></li>
-                        <li class="list-unstyled"><a href="https://www.instagram.com/" target="_blank" id="Instagram" class="list-unstyled list-group-item">Instagram</a></li>
-                        <li class="list-unstyled"><a href="https://www.linkedin.com/" target="_blank" id="LinkedIn" class="list-unstyled list-group-item">LinkedIn</a></li>
-                    </ul>
-                </div>
+        <!-- FOOTER SECTION-->
+        <div class="footer-details">
+            <div>
+                <h3>Get in touch</h3>
+                <ul>
+                    <li ><a href="https://www.facebook.com/" target="_blank" id="Facebook" class="social-item">Facebook</a></li>
+                    <li ><a href="https://www.youtube.com/" target="_blank" id="Youtube" class="social-item">Youtube</a></li>
+                    <li ><a href="https://twitter.com/" target="_blank" id="Twitter" class="social-item">Twitter</a></li>
+                    <li ><a href="https://www.instagram.com/" target="_blank" id="Instagram" class="social-item">Instagram</a></li>
+                    <li ><a href="https://www.linkedin.com/" target="_blank" id="LinkedIn" class="social-item">LinkedIn</a></li>
+                </ul>
             </div>
-            <div class="col-sm-6">
-                <div class="text-center">
-                    <h3>Location</h3>
-                    <a href="https://www.google.gr/maps/@40.6212503,22.9048276,13z?entry=ttu" class="text-decoration-none link-dark"><p>Thessaloniki, Greece</p></a>
-                </div>
-                <div class="text-center">
-                    <h3>Call</h3>
-                    <p>+00 123 456 789</p>
-                </div>
+            <div>
+                <h3>Location</h3>
+                <a href="https://www.google.gr/maps/@40.6212503,22.9048276,13z?entry=ttu" ><p>Thessaloniki, Greece</p></a>
+            </div>
+            <div >
+                <h3>Call</h3>
+                <p>+00 123 456 789</p>
             </div>
         </div>
-        <div class="container-fluid h-auto yellow position-static m-n5">
+        <div class="copyright-text">
             <div>
-                <p class="text-center">
+                <p>
                     © 2023 Copyright: Panagiotis Faltsioni
                 </p>
             </div>
         </div>
-    </footer>
-
+    </footer>                   
+    <script src="script.js"></script>
 </body>
+</html>
